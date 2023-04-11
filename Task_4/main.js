@@ -17,6 +17,14 @@ let time = {
   subtract_one_seconds(){
     Date_time.setSeconds(Date_time.getSeconds()-1)
     this.show_time();
+  },
+  //#4
+  show_current_date(){
+    setInterval(function() {
+      document.open();
+      const current_time = new Date();
+      document.write(`${current_time.getHours() < 10 ? '0' + current_time.getHours() : current_time.getHours()}:${current_time.getMinutes() < 10 ? '0' + current_time.getMinutes() : current_time.getMinutes()}:${current_time.getSeconds() < 10 ? '0' + current_time.getSeconds() : current_time.getSeconds()}`);
+    }, 1000);
   }
 };
 const Date_time = new Date( );
@@ -24,9 +32,8 @@ Date_time.setHours(time.hours,time.minutes,time.seconds);
 time.show_time(); //display time
 time.add_one_seconds(); // add one second
 time.subtract_one_seconds(); // subtract one second
-//#4
-const current_time = new Date();
-document.write(`${current_time.getHours() < 10 ? '0' + current_time.getHours() : current_time.getHours()}:${current_time.getMinutes() < 10 ? '0' + current_time.getMinutes() : current_time.getMinutes()}:${current_time.getSeconds() < 10 ? '0' + current_time.getSeconds() : current_time.getSeconds()}`);
+time.show_current_date(); //show current time
+
 
 
 //Task 4.2
