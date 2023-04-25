@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-sm">
+    
+      <style>table{
+        overflow-y:scroll;
+        height:500px;
+        
+        display:block;
+     }</style>
+        
+
+        
+      <div class="row align-items-start">
+        
+        <div data-bs-spy="scroll" class="col-5">
+            <center><h1 class="fst-italic text-info">List of cars</h1></center>
+            <table  id="product-list" class="table table-success table-striped table-hover ">
+                <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Customs clearance status</th>
+                        <th scope="col">Body type</th>
+                        <th scope="col">Date buy</th>
+                      </tr>
+                    </thead>
+                    <tbody id="array_cars">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Toyota Corolla</td>
+                        <td>2022</td>
+                        <td>25213$</td>
+                        <td>Grey</td>
+                        <td>Yes</td>
+                        <td>Sedan</td>
+                        <td>28.07.2023</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Mazda 3</td>
+                        <td>2015</td>
+                        <td>10000$</td>
+                        <td>Blue</td>
+                        <td>Yes</td>
+                        <td>Sedan</td>
+                        <td>13.03.2018</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Nissan Leaf</td>
+                        <td>2013</td>
+                        <td>9450$</td>
+                        <td>Black</td>
+                        <td>Yes</td>
+                        <td>Hatchback</td>
+                        <td>02.02.2017</td>
+                      </tr>
+                    </tbody>
+              </table>
+        
+    </div>
+        <div class="col">
+            <h2 class="fst-italic text-info">Add cars to list</h2>
+            <div class="col-10">
+                <input class="form-control" id="Model_input" type="text" placeholder="Model" aria-label="default input example"><br>
+            </div>
+            <div class="col-10">
+                <input class="form-control" id="Year_input" type="text" placeholder="Year" aria-label="default input example"><br>
+            </div>
+            <div class="col-10">
+                <input class="form-control" id="Price_input" type="text" placeholder="Price" aria-label="default input example"><br>
+            </div>
+            <div class="col-10">
+                <input class="form-control" id="Color_input" type="text" placeholder="Color" aria-label="default input example"><br>
+            </div>
+            <div class="col-10">
+                <input class="form-control" id="Status_input" type="text" placeholder="Customs clearance status (Yes/No)" aria-label="default input example"><br>
+            </div>
+            <div class="col-10">
+                <select class="form-select" id="Body_type_input" aria-label="Default select example" >
+                    <option selected>Sedan</option>
+                    <option>Minivan</option>
+                    <option>Hatchback</option>
+                    <option>Pick-up</option>
+                    <option>Coupe</option>
+                  </select><br>
+            </div>
+            <div class="col-10">
+                <input class="form-control" id="Date_buy_input" type="text" placeholder="Date buy" aria-label="default input example"><br>
+            </div>
+            <button type="button" id="add-car-btn" class="btn btn-success">Add to list</button><br><br>
+            <button type="button" id="clear-all-btn" class="btn btn-danger">Clear list</button>
+        </div>
+        <div class="col">
+            <h2 class="fst-italic text-info">Search in list</h2>
+            <div class="col-10">
+                <input list="myDatalist" class="form-control" id="search_in_list" type="text" placeholder="Enter Model" aria-label="default input example"><br>
+                <datalist id="myDatalist"></datalist>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
